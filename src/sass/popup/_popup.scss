@@ -1,0 +1,26 @@
+@import '__content/popup__content';
+@import '__close/popup__close';
+@import '__title/popup__title';
+@import '__form/popup__form';
+@import '__input/popup__input';
+@import '__button/popup__button';
+@import '_is-opened/popup_is-opened';
+@import '__image-container/popup__image-container';
+@import '__img/popup__img';
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  
+  &_disabled {
+    display: none;
+  }
+}

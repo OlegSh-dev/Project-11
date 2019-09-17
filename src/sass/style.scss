@@ -1,0 +1,17 @@
+@import '../fonts/fonts'; 
+@import 'root/root';
+@import 'header/header';
+@import 'logo/logo';
+@import 'button/button';
+@import 'profile/profile';
+@import 'user-info/user-info';
+@import 'helper/helper';
+@import 'places-list/places-list';
+@import 'place-card/place-card';
+@import 'popup/popup';
+@import 'error/error';
+@import 'tooltip/tooltip';
+
+body {
+  background-color: #000;
+}

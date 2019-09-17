@@ -1,0 +1,44 @@
+.helper {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 20px 0;
+}
+
+.sort {
+	margin: 0;
+	font-size: 12px;
+}
+
+.sort-button {
+	margin-left: 15px;
+	width: fit-content;
+	height: 18px;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	padding-right: 8px;
+	padding-left: 8px;
+	border-radius: 3px;
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: #fff;
+		color: #000;
+		}
+
+	&:active {
+	background-color: #3482f1; 
+	}
+}
+
+@media (max-width: 370px) {
+	.helper {
+		flex-direction: column;
+	}
+
+	.sort-button {
+		margin-top: 10px;
+	}
+}
