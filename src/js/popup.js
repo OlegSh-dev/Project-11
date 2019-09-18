@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * класс для использования в качестве конструктора при создании всплывающих окон
  */
@@ -27,3 +25,5 @@ class Popup {
 		document.querySelector('.popup').remove();
 	}
 }
+
+export {Popup};

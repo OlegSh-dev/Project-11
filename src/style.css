@@ -1,15 +1,17 @@
+@import url('../public/vendor/normalize.css');
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/Inter-Regular.woff2") format("woff2");
+  src: url("../public/fonts/Inter-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  src: url("./fonts/Inter-Black.woff2") format("woff2");
+  src: url("../public/fonts/Inter-Black.woff2") format("woff2");
 }
 
 .root__section {
@@ -315,12 +317,8 @@
   cursor: pointer;
 }
 
-.place-card__image_city_karachaevsk {
-  background-image: url(../../../../../images/card-image.jpg);
-}
-
 .place-card__delete-icon {
-  background: url(./img/trash-icon.svg) center no-repeat;
+  background: url('../public/img/trash-icon.svg') center no-repeat;
   background-color: transparent;
   border: none;
   width: 18px;
@@ -378,7 +376,7 @@
 }
 
 .place-card__like-icon {
-  background: url(./img/like-inactive.svg) center no-repeat;
+  background: url('../public/img/like-inactive.svg') center no-repeat;
   background-color: transparent;
   border: none;
   width: 21px;
@@ -392,7 +390,7 @@
 }
 
 .place-card__like-icon_liked {
-  background-image: url(./img/like-active.svg);
+  background-image: url('../public/img/like-active.svg');
 }
 
 .place-card__like-icon:hover {

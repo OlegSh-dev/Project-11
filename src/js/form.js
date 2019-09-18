@@ -1,4 +1,6 @@
-'use strict';
+import {Popup} from './popup';
+
+const closeIcon = require('../../public/img/close.svg');
 
 /**
  * класс для создания форм
@@ -67,7 +69,7 @@ class Form {
 	 */
 	createNewPlaceFormMarkup() {
 		//создаем разметку в виде текста, удалив лишние пробелы
-		const stringHTML = `<img src="./img/close.svg" alt="" class="popup__close">
+		const stringHTML = `<img src=${closeIcon} alt="" class="popup__close">
 			<h3 class="popup__title popup__title_place">Новое место</h3>
 			<form class="popup__form popup__form_place" name="new" novalidate>
 				<input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" required minlength="2" maxlength="30">
@@ -85,7 +87,7 @@ class Form {
 	 */
 	createEditUserFormMarkup() {
 		//создаем разметку в виде текста, удалив лишние пробелы
-		const stringHTML = `<img src="./img/close.svg" alt="" class="popup__close">
+		const stringHTML = `<img src=${closeIcon} alt="" class="popup__close">
 			<h3 class="popup__title popup__title_place">Редактировать профиль</h3>
 			<form class="popup__form popup__form_user" name="user" novalidate>
 				<input type="text" name="user" class="popup__input popup__input_type_user-name" placeholder="Имя" required minlength="2" maxlength="30">
@@ -103,7 +105,7 @@ class Form {
 	 */
 	createEditAvatarFormMarkup() {
 		//создаем разметку в виде текста, удалив лишние пробелы
-		const stringHTML = `<img src="./img/close.svg" alt="" class="popup__close">
+		const stringHTML = `<img src=${closeIcon} alt="" class="popup__close">
 			<h3 class="popup__title popup__title_place">Обновить аватар</h3>
 			<form class="popup__form popup__form_avatar" name="avatar" novalidate>
 				<input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на аватар" required pattern="https?://.*">
@@ -279,3 +281,6 @@ class Form {
 		this.enableButton(inputArr, button);
 	}
 }
+
+export {Form};
+export {closeIcon};

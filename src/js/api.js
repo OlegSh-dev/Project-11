@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * класс для общения с сервером
  */
@@ -156,3 +154,5 @@ class Api {
 		return this.checkResponseStatus(res);
 	}
 }
+
+export {Api};

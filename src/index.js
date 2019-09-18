@@ -1,13 +1,15 @@
-//ОТ АВТОРА:
-// Дополнил задания еще одним: сделал всплывающую подсказку при наведении мыши на количество лайков карточки,
-// там отображаются все пользователи, которые поставили лайк. Прошу оценить это решение тоже)
+import "./style.css";
 
+import {Api} from './js/api';
+import {CardList} from './js/cardList';
+import {Form} from './js/form';
+import {User} from './js/user';
 
-'use strict';
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort2' : 'https://praktikum.tk/cohort2';
 
 // создаем новый объект api с заданными параметрами доступа к серверу
-const api = new Api({
-	baseUrl: 'http://95.216.175.5/cohort2',
+export const api = new Api({
+	baseUrl: serverUrl,
 	headers: {
 		authorization: '7858cecb-8a25-4aa6-9e6c-4b58c7960d56',
 		contentType: 'application/json'

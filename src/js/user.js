@@ -1,4 +1,4 @@
-'use strict';
+import {api} from '../index';
 
 /**
  *  класс пользователя для работы с информацией о нем
@@ -34,3 +34,5 @@ class User {
 		document.querySelector('.user-info__photo').style.backgroundImage = `url(${avatar})`;
 	}
 }
+
+export {User};

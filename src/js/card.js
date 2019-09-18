@@ -1,4 +1,6 @@
-'use strict';
+import {api} from '../index';
+import {Popup} from './popup';
+import {closeIcon as closeIcon2} from './form';
 
 /**
  * класс для использования в качестве конструктора при создании карточек
@@ -20,7 +22,6 @@ class Card {
 		this.checkUserLike();
 		this.addListeners();
 	}
-
 
 	/**
 	 * метод возвращает элемент для вставки его в DOM
@@ -149,7 +150,7 @@ class Card {
 			const popup = new Popup(document.querySelector('.root'));
 
 			// объявляем разметку для кнопки закрытия картинки
-			const closeIcon = `<img src="./img/close.svg" alt="" class="popup__close">`;
+			const closeIcon = `<img src=${closeIcon2} alt="" class="popup__close">`;
 
 			const imgContainer = document.createElement('div');
 			const img = document.createElement('img');
@@ -211,3 +212,5 @@ class Card {
 	}
 
 }
+
+export {Card};

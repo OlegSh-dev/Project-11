@@ -1,4 +1,6 @@
-'use strict';
+import {Card} from './card';
+import {api} from '../index';
+
 
 /**
  * класс для создания контейнера с карточками на странице
@@ -71,3 +73,5 @@ class CardList {
 		}
 	}
 }
+
+export {CardList};
