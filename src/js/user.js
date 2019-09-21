@@ -1,13 +1,11 @@
-'use strict';
+import {api} from '../index';
 
 /**
  *  класс пользователя для работы с информацией о нем
  */
 class User {
 	constructor() {
-		// вызываем метод класса api для запроса информации о пользователе
 		api.getUserData()
-			// из полученного объекта извлекаем нужные данные и  вызываем нужные методы для обновления DOM
 			.then(user => {
 				this.setUserAvatarOnPage(user.avatar);
 				this.setUserDataOnPage(user.name, user.about);
@@ -34,3 +32,5 @@ class User {
 		document.querySelector('.user-info__photo').style.backgroundImage = `url(${avatar})`;
 	}
 }
+
+export {User};

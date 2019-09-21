@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * класс для общения с сервером
  */
@@ -30,13 +28,11 @@ class Api {
 	 * асинхронный метод для загрузки с сервера карточек на страницу
 	 */
 	async getInitialCards() {
-		// отправляем запрос на сервер и возвращаем его ответ
 		const res = await fetch(`${this.baseUrl}/cards`, {
 					headers: {
 						authorization: this.authorization
 					}
 		});
-		// проверяем статус ответа
 		return this.checkResponseStatus(res);
 	}
 
@@ -44,7 +40,6 @@ class Api {
 	 * метод для запроса с сервера информации о пользователе
 	 */
 	getUserData() {
-		// выполняем запрос методом GET
 		return fetch(`${this.baseUrl}/users/me`, {
 					headers: {
 						authorization: this.authorization
@@ -59,14 +54,12 @@ class Api {
 	 * @param {string} about - значение поля формы редактирования профиля
 	 */
 	updateUserData(name, about) {
-		// делаем запрос на сервер методом PATCH
 		return fetch(`${this.baseUrl}/users/me`, {
 			method: 'PATCH',
 			headers: {
 				authorization: this.authorization,
 				'Content-Type': this.contentType
 			},
-			// передаем данные из полей формы в виде json-объекта, переведенного в строку
 			body: JSON.stringify({
 				name: name,
 				about: about
@@ -87,7 +80,6 @@ class Api {
 				authorization: this.authorization,
 				'Content-Type': this.contentType
 			},
-			// передаем данные из полей формы в виде json-объекта, переведенного в строку
 			body: JSON.stringify({
 				name: name,
 				link: link
@@ -156,3 +148,5 @@ class Api {
 		return this.checkResponseStatus(res);
 	}
 }
+
+export {Api};
