@@ -7,7 +7,6 @@ import {User} from './js/user';
 
 const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort2' : 'https://praktikum.tk/cohort2';
 
-// создаем новый объект api с заданными параметрами доступа к серверу
 export const api = new Api({
 	baseUrl: serverUrl,
 	headers: {
@@ -16,34 +15,25 @@ export const api = new Api({
 	}
 });
 
-// создаем пользователя через конструктор соответствующего класса
 const user = new User();
 
-// создаем новый контейнер для карточек через конструктор
 const placesListEl = new CardList(document.querySelector('.places-list'));
 
 
-// обработчик на кнопку сортировки карточек
 document.querySelector('.sort-button').addEventListener('click', function() {
 	document.querySelector('.sort-button').classList.toggle('pressed');
 	document.querySelector('.sort-button').blur();
 	placesListEl.sortCards();
 });
 
-// обработчик на кнопку добавления новой карточки
 document.querySelector('.user-info__button').addEventListener('click', function(event) {
-	// вызываем конструктор форм
 	const form = new Form(event);
 });
 
-// вешаем обработчик на кнопку редактирования профиля
 document.querySelector('.user-info__edit-button').addEventListener('click', function(event) {
-	// вызываем конструктор форм
 	const form = new Form(event);
 });
 
-// вешаем обработчик на аватарку
 document.querySelector('.user-info__photo').addEventListener('click', function(event) {
-	// вызываем конструктор форм
 	const form = new Form(event);
 });
