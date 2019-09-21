@@ -44,7 +44,6 @@ module.exports = {
 			{
 				test: /\.css$/i, // применять это правило только к CSS-файлам
 				use: [
-					// MiniCssExtractPlugin.loader,
 					(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
 					{
 						loader: 'css-loader',
